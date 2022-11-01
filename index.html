@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Documentação API Project-Front</title>
+  </head>
+  <body>
+    <h1>Documentação API Projeto Front-End</h1>
+    <div class="container">
+      <div>
+        <h2>Criando Usuário</h2>
+        <div class="metodo__end">
+          <p>Metodo: POST</p>
+          <p>Endpoint: /register</p>
+        </div>
+
+        <p>Exemplo de corpo a ser enviando para requisição</p>
+        <p>
+          <strong
+            >Unicos campos obrigatorios são EMAIL E SENHA, então podem colocar
+            os inputs necessarios</strong
+          >
+        </p>
+        <img src="./imagens/corpoRegistro.png" alt="" />
+
+        <p>Exemplo de resposta</p>
+        <p>Na resposta temos duas informações a mais ID e TOKEN</p>
+        <img src="./imagens/respRegistro.png" alt="" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Login</h2>
+        <div class="metodo__end">
+          <p>Metodo: POST</p>
+          <p>Endpoint: /login</p>
+        </div>
+
+        <p>Exemplo de corpo a ser enviando para requisição</p>
+        <p>
+          <strong>É necessário HEADER: Content-Type application/json</strong>
+        </p>
+        <p><strong>Email e senha são obrigatorios</strong></p>
+
+        <img src="./imagens/corpoLogin.png" alt="" />
+
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respLogin.png" alt="" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Criando Necessidades</h2>
+        <div class="metodo__end">
+          <p>Metodo: POST</p>
+          <p>Endpoint: /needs</p>
+        </div>
+        <p><strong>É necessário o TOKEN da casa beneficente logada</strong></p>
+        <p>
+          <strong>É necessário HEADER: Content-Type application/json</strong>
+        </p>
+        <br />
+        <p>Exemplo de corpo a ser enviando para requisição</p>
+        <p>
+          <strong
+            >No corpo a ser enviado é necessário o id da casa logada no campo
+            "userId"</strong
+          >
+        </p>
+
+        <img src="./imagens/corpoNeed.png" alt="" />
+
+        <p>Exemplo de resposta</p>
+        <p>O ID retornado é o id da Necessidade criada</p>
+        <img src="./imagens/respNeed.png" alt="" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Pesquisando todos os usuários</h2>
+        <div class="metodo__end">
+          <p>Metodo: GET</p>
+          <p>Endpoint: /users</p>
+        </div>
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respUsuarios.png" alt="" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Pesquisando todas as Necessidades</h2>
+        <div class="metodo__end">
+          <p>Metodo: GET</p>
+          <p>Endpoint: /needs</p>
+        </div>
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respNecessidades.png" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Pesquisando Necessidades por ID</h2>
+        <div class="metodo__end">
+          <p>Metodo: GET</p>
+          <p>Endpoint: /needs?userId=<strong>ID DO USUÁRIO</strong></p>
+        </div>
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respNecessiPorId.png" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Editando Usuário/Casa beneficente</h2>
+        <div class="metodo__end">
+          <p>Metodo: PATCH</p>
+          <p>Endpoint: /users/<strong>ID DO USUÁRIO LOGADO</strong></p>
+        </div>
+
+        <p>Exemplo de corpo a ser enviado</p>
+        <p><strong>É necessário o TOKEN do usuário logado</strong></p>
+        <p>
+          <strong>É necessário o HEADER: Content-Type application/json</strong>
+        </p>
+        <img src="./imagens/corpoEditUse.png" alt="" />
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/resEdite.png" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Editando Necessidade</h2>
+        <div class="metodo__end">
+          <p>Metodo: PATCH</p>
+          <p>Endpoint: /needs/<strong>ID DA NECESSIDADE</strong></p>
+        </div>
+
+        <p>Exemplo de corpo a ser enviado</p>
+        <p><strong>É necessário o TOKEN do usuário logado</strong></p>
+        <p>
+          <strong>É necessário o HEADER: Content-Type application/json</strong>
+        </p>
+        <p><strong>O "userId" deve receber o id do usuário logado</strong></p>
+        <img src="./imagens/corpoEditeNecessid.png" alt="" />
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respEditeNecessid.png" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Deletando Usuário</h2>
+        <div class="metodo__end">
+          <p>Metodo: DELETE</p>
+          <p>Endpoint: /users/<strong>ID DO USUÁRIO</strong></p>
+        </div>
+
+        <p><strong>É necessário o TOKEN do usuário logado</strong></p>
+
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respDelete.png" />
+      </div>
+    </div>
+    <br /><br />
+    <div class="container">
+      <div>
+        <h2>Deletando Necessidade</h2>
+        <div class="metodo__end">
+          <p>Metodo: DELETE</p>
+          <p>Endpoint: /needs/<strong>ID DA NECESSIDADE</strong></p>
+        </div>
+
+        <p><strong>É necessário o TOKEN do usuário logado</strong></p>
+
+        <p>Exemplo de resposta</p>
+        <img src="./imagens/respDelete.png" />
+      </div>
+    </div>
+  </body>
+</html>
