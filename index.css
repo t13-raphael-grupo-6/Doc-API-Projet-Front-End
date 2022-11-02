@@ -4,6 +4,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+body > h3 {
+  color: red;
+}
 .metodo__end {
   display: flex;
   gap: 30px;
